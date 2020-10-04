@@ -1,4 +1,4 @@
-
+// USANDO .toBe()
 import { getSaludo } from '../../base/02-template-string'; // se importa el metodo saludo
 import '@testing-library/jest-dom'; //No dara sujerencias de metodos test a utilizar como ser el "toBe()"
 
