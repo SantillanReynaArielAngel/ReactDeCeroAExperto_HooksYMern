@@ -6,16 +6,16 @@ describe("Archivo 05-funciones.js", ()=>{
 
     test('Debe devolver un objeto(un diccionario)', ()=>{
         //inicializar 
-        const datos={
+        const datosEsperados={
             uid:'ABC123',
             username:'El_papi1234',
         }
         //estimulo
-        const datosOriginales=getUser();
+        const datosObtenidos=getUser();
 
         //Observar comportamiento
         //PARA COMPARAR 2 OBJETOS(SUS PROPIEDADES Y VALORES) SE UTILIZA EL "toEqual"
-        expect(datos).toEqual(datosOriginales);
+        expect(datosObtenidos).toEqual(datosEsperados);
     })
 
 

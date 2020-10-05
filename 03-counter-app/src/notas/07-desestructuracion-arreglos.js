@@ -7,10 +7,10 @@ const personajes = ['Goku', 'Vegeta', 'Trunks'];
 
 //de esta forma se desectroctura un array (como los diccionarios)
 const [ P1 ] = personajes; //si no se separa con una cosntante entre los [] por defecto se sacara el valor del indice 0 del array
-// console.log(P1);
+console.log(P1);
 //IMPORTANTE: para sacar un elemento se de colocar "," cuantas se necesiten para llegar al elemnto deseado
 const [, , p3] = personajes;
-// console.log(p3);
+console.log(p3);
 
 
 //Desectrocturacion utilizando funciones:
@@ -21,7 +21,7 @@ const retornarArreglo = () => {
 
 //Se desosctructurara lo que devuelva la funcion
 const [ letras, numeros]=retornarArreglo();
-// console.log(letras,numeros);
+console.log(letras,numeros);
 
 //TAREA
 //1. El primer valor del arr se llamara nombre
@@ -38,12 +38,6 @@ const userState = (valor) =>{
 
 //Desectructurando.
 //la segunda posision es un funcion que tomara el nombre que se le indica en los [], dicha funcion puede ser plenamente utilizada.
-// const [nombre,setNombre] = userState('SANTILLAN');
-// console.log(nombre);
-// setNombre();
-
-
-//exportar para su test
-export{
-    retornarArreglo,
-}
+const [nombre,setNombre] = userState('SANTILLAN');
+console.log(nombre);
+setNombre();

@@ -12,10 +12,10 @@ describe("pruebas en 02-template-string.js", ()=>{
         const nombre="Ariel";
 
         //2 estimulo
-        const saludo=getSaludo(nombre)// se envia el argumento nombre
+        const saludoObtenido=getSaludo(nombre)// se envia el argumento nombre
 
         //observar comportamiento
-        expect(saludo).toBe(`Hola ${nombre}`);
+        expect(saludoObtenido).toBe(`Hola ${nombre}`);
     })
    
     //Tarea getSaludo debe retornar Hola Carlos si no hay argumento nombre
@@ -23,9 +23,9 @@ describe("pruebas en 02-template-string.js", ()=>{
         //inicializacion
         const nombre2="Carlos";
         //estimulo
-        const saludodefault=getSaludo(); //no se envia el argumento nombre
+        const saludoObtDefault=getSaludo(); //no se envia el argumento nombre
         // observar comportamiento
-        expect(saludodefault).toBe(`Hola ${nombre2}`);
+        expect(saludoObtDefault).toBe(`Hola ${nombre2}`);
     })
 
 });

@@ -3,7 +3,7 @@
 // dentro de las {}, se coloca los que se necesita importar del archivo al que se hace refenrencia; PERO PREVIAMENTE SE DEBERA HABER EXPORTADO (export) lo que se quiere EN EL ARCHIVO al que se hace referencia
 //Es opcional colocar .js y ; para al realizar la importacion de un ARCHIVO JS
 
-import {heroes} from '../data/heroes';
+import {heroes} from '../data/heroes'; //CUANDO NO TIENNE LLAVES ES LA EXPORTACION POR DEFECTO
 
 //IMPORT por default: import heroes from '../data/heroes'; el nombre de la importacion puede se culaquiercosa, en este caso es "heroes"
 
