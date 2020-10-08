@@ -12,18 +12,17 @@ const getImage = async() => {
 
     //POR BUENAS PRACTICAS SE UTILIZARA EL try-catch
     try{// Se ejecuta el contenido y si por algun problema da error, se salta al catch enviandole el error
-        const apiKey= 'q30x2yRuGnDfDvhh28edIJ3vKVnnM89t'; // Fectch API
+        const apiKey= '8wlANRRetfjW9wAJqzwMFrc97eRVNTxk'; // Fectch API
         const respuesta = await fetch(`https://api.giphy.com/v1/gifs/random?api_key=${apiKey}`);
         const {data} = await respuesta.json(); // Primeramente se busca el contenido del boody(Es un dicionario anidado) de la respues de la API, de ese diccionario anidado SACAMOS(con desestructuracion) el campo data(que la la vez es otro diccionario).
         const {url} = data.images.original;//Del diccionario anidado "data" apuntamos al campo "original"(que es un diccionario) y de "original" saca el valor del campo url con la desestructracion
-        console.log(url);
-        //Se procese a colocar la imagen de la url en nuestra pagina
-        const img = document.createElement('img');
-        img.src=url;
-        document.body.append(img);
+        
+        return url;
     }catch(error){//catch recive el error
         //AQUI SE MANEJA EL ERROR (ejemplo: una imge de error o colocar algun mensaje)
-        console.error(`Este es el error que atrapo el catch: \n`, error); // Para salto de linea: \n 
+        // console.error(`Este es el error que atrapo el catch: \n`, error); // Para salto de linea: \n 
+        return 'No existe';
+    
     }
 }
 
@@ -50,3 +49,8 @@ getImage();
 //         })
 //     .catch(console.warn);//ES SUFICIENTE TENER UN SOLO catch
 
+
+//Para el Test
+export{
+    getImage,
+}
