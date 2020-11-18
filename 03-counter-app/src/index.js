@@ -11,4 +11,4 @@ const divCounter = document.querySelector('#counter');
 
 //2DO: renderizar el componete utilizando  ReactDOM
 // ReactDOM.render(<CounterApp value={10} />, divCounter); 
-ReactDOM.render(<PrimeraApp saludo='Hola, Soy Goku'  />, divCounter); 
+ReactDOM.render(<PrimeraApp saludo='Hola, Soy Goku' />, divCounter); 
