@@ -8,6 +8,7 @@ import { shallow } from 'enzyme';
 
 
 
+
 describe('Pruebas en <PrimeraApp>',()=>{
     // test('debe retornar el mensaje "Hola, Soy Goku" ',()=>{
     //     const saludo='Hola, Soy Goku';
@@ -28,17 +29,26 @@ describe('Pruebas en <PrimeraApp>',()=>{
        
     // });
 
+    test('debe de mostrar <PrimeraApp /> correctamente',()=>{
+        const saludo='Hola, Soy Goku';
+        const wrapper=shallow(<PrimeraApp saludo={ saludo }/>)
+
+        expect(wrapper).toMatchSnapshot();
+    });
+
     test('Debe mostrar el subtitulo enviado por props', ()=>{
         const saludo = 'Hola, Soy Goku';
-        const subTitulo= 'Subtitulo por defecto';
+        const subTitulo="Soy un subtitulo";
         const wrapper=shallow(
-            <PrimeraApp
+            <PrimeraApp 
                 saludo={saludo}
-                subtitulo={subTitulo}
-            />
-        );
-        
-       const textoParrafo =wrapper.find('p').text();
-       expect(textoParrafo).toBe(subTitulo);
+                subtitulo={ subTitulo }
+            />)
+
+            const textoParrafo=wrapper.find('p').text();// si buscaramos por id seria '#idnombre', si seria por clases '.nombreclase'
+            //console.log(textoParrafo);
+            expect(textoParrafo).toBe(subTitulo);
     });
+
+    
 });

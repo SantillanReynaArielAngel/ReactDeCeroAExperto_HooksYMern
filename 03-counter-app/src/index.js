@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PrimeraApp from './PrimeraApp'
-// import CounterApp from './CounterApp';
+// import PrimeraApp from './PrimeraApp'
+import CounterApp from './CounterApp';
 
-import './index.css'; // de manera opcional
-
-//1RO: crear la referencia al archivo index.html( al div con id=counter en este caso)
-const divCounter = document.querySelector('#counter');
+import './index.css';
 
 
-//2DO: renderizar el componete utilizando  ReactDOM
-// ReactDOM.render(<CounterApp value={10} />, divCounter); 
-ReactDOM.render(<PrimeraApp saludo='Hola, Soy Goku' />, divCounter); 
+const divRoot = document.querySelector('#app');
+
+
+// ReactDOM.render( <PrimeraApp saludo="Hola, Soy Goku" />  , divRoot );
+ReactDOM.render( <CounterApp />  , divRoot );
